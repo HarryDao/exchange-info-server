@@ -1,0 +1,59 @@
+{
+  "name": "exchange-info-server",
+  "version": "1.0.0",
+  "description": "Server for Exchange Info app",
+  "main": "build/index.js",
+  "repository": "https://github.com/HarryDao/exchange-info-server",
+  "author": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "dev": "ts-node-dev  --files src/index.ts",
+    "dev:save": "ENABLE_SAVE_FILE_TO_LOCAL=true ts-node-dev --ignore-watch=src/data/sample --files src/index.ts",
+    "dev:sample": "USE_SAMPLE_DATA=true ts-node-dev --files src/index.ts",
+    "coverage": "nyc yarn run test",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js -f ./src/database/config.ts",
+    "migrate:run": "yarn run typeorm migration:run",
+    "migrate:revert": "yarn run typeorm migration:revert",
+    "migrate:generate": "yarn run typeorm migration:generate -n"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.3",
+    "socket.io": "^4.7.2",
+    "typeorm": "^0.3.17",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.18",
+    "@types/morgan": "^1.9.6",
+    "@types/node": "^20.8.2",
+    "@types/ws": "^8.5.6",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0",
+    "npm": ">=8.19.2"
+  }
+}
