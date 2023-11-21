@@ -1,0 +1,4 @@
+src/database/migrations/*
+node_modules/*
+build/*
+__tests__/*
