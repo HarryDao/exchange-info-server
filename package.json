@@ -8,6 +8,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "rimraf build && tsc",
+    "start": "node build",
+    "start:save": "ENABLE_SAVE_FILE_TO_LOCAL=true node build",
     "dev": "ts-node-dev  --files src/index.ts",
     "dev:save": "ENABLE_SAVE_FILE_TO_LOCAL=true ts-node-dev --ignore-watch=src/data/sample --files src/index.ts",
     "dev:sample": "USE_SAMPLE_DATA=true ts-node-dev --files src/index.ts",
