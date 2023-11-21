@@ -1,0 +1,10 @@
+export declare const HISTORICAL_UNIT: number;
+export declare const HISTORICAL_API_TWELVE_DATA_UNIT = "1day";
+export declare const HISTORICAL_FINNHUB_RESOLUTION = "D";
+export declare const LONG_HISTORICAL_LENGTH = 90;
+export declare const SHORT_HISTORICAL_LENGTH = 30;
+export declare const MAX_RETRIES_HISTORICAL_DATA_FIRST_TIME = 10;
+export declare const MAX_RETRIES_HISTORICAL_DATA_SUBSEQUENT_TIME = 5;
+export declare const MAX_RETRIES_CURRENT_DATA = 2;
+export declare const DATA_FETCHING_INTERVAL: number;
+export declare const SOCKET_WAIT_TIME_BEFORE_RESET: number;

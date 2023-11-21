@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FINNHUB_SOCKET_URL = exports.FINNHUB_CRYPTO_CANDLE_ENDPOINT = exports.FINNHUB_STOCK_CANDLE_ENDPOINT = exports.FINNHUB_STOCK_PROFILE2_ENDPOINT = exports.FINNHUB_QUOTE_ENDPOINT = exports.FINNHUB_API_URL = exports.FINNHUB_API_QUOTA_PER_MINUTE = exports.FINNHUB_SOCKET_API_TOKEN = exports.FINNHUB_REST_API_TOKEN = void 0;
+exports.FINNHUB_REST_API_TOKEN = process.env.FINNHUB_REST_API_TOKEN || '';
+exports.FINNHUB_SOCKET_API_TOKEN = process.env.FINNHUB_SOCKET_API_TOKEN || '';
+exports.FINNHUB_API_QUOTA_PER_MINUTE = 30;
+exports.FINNHUB_API_URL = 'https://finnhub.io/api/v1';
+exports.FINNHUB_QUOTE_ENDPOINT = 'quote';
+exports.FINNHUB_STOCK_PROFILE2_ENDPOINT = '/stock/profile2';
+exports.FINNHUB_STOCK_CANDLE_ENDPOINT = 'stock/candle';
+exports.FINNHUB_CRYPTO_CANDLE_ENDPOINT = 'crypto/candle';
+exports.FINNHUB_SOCKET_URL = 'wss://ws.finnhub.io';
