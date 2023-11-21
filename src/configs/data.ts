@@ -15,7 +15,7 @@ export const MAX_RETRIES_HISTORICAL_DATA_SUBSEQUENT_TIME = 5;
 export const MAX_RETRIES_CURRENT_DATA = 2;
 
 // Historical data fetching interval
-export const HISTORICAL_DATA_FETCHING_INTERVAL = 1 * 24 * 60 * 60 * 1000; // ms
+export const DATA_FETCHING_INTERVAL = 1 * 24 * 60 * 60 * 1000; // ms
 
 // Live data
 export const SOCKET_WAIT_TIME_BEFORE_RESET = 30 * 60 * 1000; // 30 minutes

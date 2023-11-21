@@ -1,252 +1,74 @@
 {
   "EUR/USD": {
-    "price": 1.09,
-    "time": 1700251198,
-    "info": {
-      "Symbol": "EUR/USD",
-      "Name": "Euro US Dollar",
-      "Exchange": "Forex"
-    }
+    "price": 1.094,
+    "time": 1700567866000
   },
   "AAPL": {
-    "price": 189.69,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NASDAQ NMS - GLOBAL MARKET",
-      "Finnhub industry": "Technology",
-      "Ipo": "1980-12-12",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/AAPL.svg",
-      "Market capitalization": 2950201.6223959285,
-      "Name": "Apple Inc",
-      "Phone": "14089961010.0",
-      "Share outstanding": 15634.23,
-      "Ticker": "AAPL",
-      "Weburl": "https://www.apple.com/"
-    }
-  },
-  "USD/JPY": {
-    "price": 149.66,
-    "time": 1700251197,
-    "info": {
-      "Symbol": "USD/JPY",
-      "Name": "US Dollar Japanese Yen",
-      "Exchange": "Forex"
-    }
-  },
-  "GBP/USD": {
-    "price": 1.2449,
-    "time": 1700251197,
-    "info": {
-      "Symbol": "GBP/USD",
-      "Name": "British Pound US Dollar",
-      "Exchange": "Forex"
-    }
+    "price": 191.45,
+    "time": 1700514000000
   },
   "MSFT": {
-    "price": 369.85,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NASDAQ NMS - GLOBAL MARKET",
-      "Finnhub industry": "Technology",
-      "Ipo": "1986-03-13",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/MSFT.svg",
-      "Market capitalization": 2748822.4559829226,
-      "Name": "Microsoft Corp",
-      "Phone": "14258828080.0",
-      "Share outstanding": 7432.26,
-      "Ticker": "MSFT",
-      "Weburl": "https://www.microsoft.com/en-us"
-    }
+    "price": 377.44,
+    "time": 1700514001000
   },
-  "AUD/USD": {
-    "price": 0.65105,
-    "time": 1700251196,
-    "info": {
-      "Symbol": "AUD/USD",
-      "Name": "Australian Dollar US Dollar",
-      "Exchange": "Forex"
-    }
-  },
-  "USD/CAD": {
-    "price": 1.3719,
-    "time": 1700251199,
-    "info": {
-      "Symbol": "USD/CAD",
-      "Name": "US Dollar Canadian Dollar",
-      "Exchange": "Forex"
-    }
+  "USD/JPY": {
+    "price": 147.69501,
+    "time": 1700567870000
   },
   "GOOG": {
-    "price": 136.94,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NASDAQ NMS - GLOBAL MARKET",
-      "Finnhub industry": "Media",
-      "Ipo": "2004-08-19",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/GOOG.svg",
-      "Market capitalization": 1703553.2584978817,
-      "Name": "Alphabet Inc",
-      "Phone": "16502530000.0",
-      "Share outstanding": 12516,
-      "Ticker": "GOOGL",
-      "Weburl": "https://abc.xyz/"
-    }
+    "price": 137.92,
+    "time": 1700514001000
+  },
+  "GBP/USD": {
+    "price": 1.25295,
+    "time": 1700567871000
   },
   "AMZN": {
-    "price": 145.18,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NASDAQ NMS - GLOBAL MARKET",
-      "Finnhub industry": "Retail",
-      "Ipo": "1997-05-15",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/AMZN.svg",
-      "Market capitalization": 1500294.6761088339,
-      "Name": "Amazon.com Inc",
-      "Phone": "12062661000.0",
-      "Share outstanding": 10334.03,
-      "Ticker": "AMZN",
-      "Weburl": "https://www.amazon.com/"
-    }
+    "price": 146.13,
+    "time": 1700514000000
+  },
+  "AUD/USD": {
+    "price": 0.65695,
+    "time": 1700567871000
   },
   "NVDA": {
-    "price": 492.98,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NASDAQ NMS - GLOBAL MARKET",
-      "Finnhub industry": "Semiconductors",
-      "Ipo": "1999-01-22",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/NVDA.svg",
-      "Market capitalization": 1217660.569959903,
-      "Name": "NVIDIA Corp",
-      "Phone": "14084862000.0",
-      "Share outstanding": 2470,
-      "Ticker": "NVDA",
-      "Weburl": "https://www.nvidia.com/"
-    }
+    "price": 504.09,
+    "time": 1700514001000
+  },
+  "USD/CAD": {
+    "price": 1.3713,
+    "time": 1700567870000
   },
   "TSLA": {
-    "price": 234.3,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NASDAQ NMS - GLOBAL MARKET",
-      "Finnhub industry": "Automobiles",
-      "Ipo": "2010-06-09",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/TSLA.svg",
-      "Market capitalization": 744821.2692311854,
-      "Name": "Tesla Inc",
-      "Phone": "15125168177.0",
-      "Share outstanding": 3178.92,
-      "Ticker": "TSLA",
-      "Weburl": "https://www.tesla.com/"
-    }
+    "price": 236.56,
+    "time": 1700567950344
   },
   "META": {
-    "price": 335.04,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NASDAQ NMS - GLOBAL MARKET",
-      "Finnhub industry": "Media",
-      "Ipo": "2012-05-18",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/FB.svg",
-      "Market capitalization": 861006.785059613,
-      "Name": "Meta Platforms Inc",
-      "Phone": "16505434800.0",
-      "Share outstanding": 2569.86,
-      "Ticker": "META",
-      "Weburl": "https://www.meta.com/"
-    }
+    "price": 339.97,
+    "time": 1700514001000
   },
   "BRK-B": {
-    "price": 358.93,
-    "time": 1700254849000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NEW YORK STOCK EXCHANGE, INC.",
-      "Finnhub industry": "Financial Services",
-      "Ipo": "1980-03-17",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/BRK.B.svg",
-      "Market capitalization": 781700.057970072,
-      "Name": "Berkshire Hathaway Inc",
-      "Phone": "14023461400.0",
-      "Share outstanding": 0.57532,
-      "Ticker": "BRK.A",
-      "Weburl": "https://www.berkshirehathaway.com/"
-    }
+    "price": 361.33,
+    "time": 1700514076000
   },
   "LLY": {
-    "price": 591.71,
-    "time": 1700254801000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NEW YORK STOCK EXCHANGE, INC.",
-      "Finnhub industry": "Pharmaceuticals",
-      "Ipo": "1970-07-09",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/LLY.svg",
-      "Market capitalization": 561714.5934748884,
-      "Name": "Eli Lilly and Co",
-      "Phone": "13172762000.0",
-      "Share outstanding": 949.3,
-      "Ticker": "LLY",
-      "Weburl": "https://www.lilly.com/"
-    }
+    "price": 597.6,
+    "time": 1700514001000
   },
   "V": {
-    "price": 249.56,
-    "time": 1700254802000,
-    "info": {
-      "Country": "US",
-      "Currency": "USD",
-      "Estimate currency": "USD",
-      "Exchange": "NEW YORK STOCK EXCHANGE, INC.",
-      "Finnhub industry": "Financial Services",
-      "Ipo": "2008-03-25",
-      "Logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/V.svg",
-      "Market capitalization": 508200.6542850812,
-      "Name": "Visa Inc",
-      "Phone": "16504323200.0",
-      "Share outstanding": 2023.6,
-      "Ticker": "V",
-      "Weburl": "https://usa.visa.com/"
-    }
+    "price": 249.97,
+    "time": 1700514002000
   },
   "BINANCE:BTCUSDT": {
-    "price": 36623.42,
-    "time": 1700387727307,
-    "info": {}
+    "price": 37174.98,
+    "time": 1700481457000
   },
   "BINANCE:ETHUSDT": {
-    "price": 1962.11,
-    "time": 1700387725830,
-    "info": {}
+    "price": 2003.67,
+    "time": 1700481457000
   },
   "BINANCE:LTCUSDT": {
-    "price": 69.8,
-    "time": 1700387702155,
-    "info": {}
+    "price": 69.95,
+    "time": 1700481455000
   }
 }

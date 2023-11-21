@@ -13,11 +13,18 @@ export interface HistoricalData {
 export interface Current {
   price: number;
   time: number;
-  info?: { [key: string]: any };
 }
 
 export interface CurrentData {
   [symbol: string]: Current;
+}
+
+export interface MoreInfo {
+  [key: string]: any;
+}
+
+export interface MoreInfoData {
+  [symbol: string]: MoreInfo;
 }
 
 export interface SocketLiveData extends Current {

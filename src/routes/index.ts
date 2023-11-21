@@ -4,6 +4,7 @@ import { DATA_CONFIGS } from '../data-configs';
 
 import { historyRouter } from './historyRoutes';
 import { currentRouter } from './currentRoutes';
+import { moreInfoRouter } from './moreInfoRoutes';
 
 export const router = Router();
 
@@ -14,3 +15,4 @@ router.get('/data-configs', (req: Request, res: Response) => {
 
 router.use('/history', historyRouter);
 router.use('/current', currentRouter);
+router.use('/more-info', moreInfoRouter);

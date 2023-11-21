@@ -1,10 +1,11 @@
 import fs from 'fs';
 
 import { SHORT_HISTORICAL_LENGTH } from '../configs/data';
-import { HistoricalData, CurrentData, Candle, Current } from '../types';
+import { HistoricalData, CurrentData, Candle, Current, MoreInfoData, MoreInfo } from '../types';
 
 import SAMPLE_CURRENT_DATA from './sample/sample-current.json';
 import SAMPLE_HISTORICAL_DATA from './sample/sample-historical.json';
+import SAMPLE_MORE_INFO_DATA from './sample/sample-more-info.json';
 
 export const {
   getAllLongHistoricalData,
@@ -13,10 +14,14 @@ export const {
   setHistoricalData,
   getCurrentData,
   setCurrentData,
+  getMoreInfoData,
+  getMoreInfoForSymbol,
+  setMoreInfoData,
   saveToLocal,
 } = (() => {
   const historicalData: HistoricalData = process.env.USE_SAMPLE_DATA ? SAMPLE_HISTORICAL_DATA : {};
   const currentData: CurrentData = process.env.USE_SAMPLE_DATA ? SAMPLE_CURRENT_DATA : {};
+  const moreInfoData: MoreInfoData = process.env.USE_SAMPLE_DATA ? SAMPLE_MORE_INFO_DATA : {};
 
   return {
     saveToLocal: () => {
@@ -28,6 +33,10 @@ export const {
       fs.writeFileSync(
         `${__dirname}/sample/sample-historical.json`,
         JSON.stringify(historicalData, null, 2)
+      );
+      fs.writeFileSync(
+        `${__dirname}/sample/sample-more-info.json`,
+        JSON.stringify(moreInfoData, null, 2)
       );
       console.log('Saved to local files');
     },
@@ -69,7 +78,20 @@ export const {
     },
     getCurrentData: () => currentData,
     setCurrentData: (symbol: string, data: Current) => {
-      currentData[symbol] = { ...(currentData[symbol] || {}), ...data };
+      const existing = currentData[symbol];
+      if (!existing || existing.time < data.time) {
+        currentData[symbol] = data;
+      }
+    },
+    getMoreInfoData: () => moreInfoData,
+    getMoreInfoForSymbol: (symbol: string) => {
+      return moreInfoData[symbol] || {};
+    },
+    setMoreInfoData: (symbol: string, moreInfo: MoreInfo) => {
+      moreInfoData[symbol] = {
+        ...(moreInfoData[symbol] || {}),
+        ...moreInfo,
+      };
     },
   };
 })();

@@ -1,10 +1,33 @@
+import { DATA_FETCHING_INTERVAL, TWELVE_API_QUOTA_PER_MINUTE } from '../../configs';
 import { DATA_CONFIGS } from '../../data-configs';
 import { DataProviderEnum, SymbolConfigWithType } from '../../types';
+import { createRequestQueue } from '../queue';
 
-import { fetchTwelveCurrentData } from './current';
+import { createJobsForFetchingTwelveCurrentData } from './current';
 
-import { initTwelveHistoricalFetchingLoop } from './historical';
+import { createJobsForFetchingHistoricalData } from './historical';
 import { initTwelveSocket } from './socket';
+
+const createAndRunQueue = async (symbols: SymbolConfigWithType[], isFirstTime?: boolean) => {
+  const { addToQueue, startQueue } = createRequestQueue({
+    creditQuota: {
+      limit: TWELVE_API_QUOTA_PER_MINUTE,
+      waitingTimeForReset: 1 * 60 * 1000, // 1 minute
+    },
+  });
+
+  addToQueue(...createJobsForFetchingTwelveCurrentData(symbols));
+  addToQueue(...createJobsForFetchingHistoricalData(symbols, isFirstTime));
+
+  await startQueue();
+};
+
+const startRequestLoop = async (symbols: SymbolConfigWithType[]) => {
+  setInterval(async () => {
+    await createAndRunQueue(symbols);
+  }, DATA_FETCHING_INTERVAL);
+  await createAndRunQueue(symbols, true);
+};
 
 export const initTwelveService = async () => {
   const symbols: SymbolConfigWithType[] = [];
@@ -20,9 +43,7 @@ export const initTwelveService = async () => {
   });
 
   if (!process.env.USE_SAMPLE_DATA) {
-    await initTwelveHistoricalFetchingLoop(symbols);
-    await new Promise((res) => setTimeout(res, 60 * 1000)); // wait 1 minute because of API Limit
-    await fetchTwelveCurrentData(symbols);
+    await startRequestLoop(symbols);
   }
 
   await initTwelveSocket(symbols);
