@@ -71,7 +71,7 @@ exports.initFinnhubSocket = (() => {
             }));
             await new Promise((res) => setTimeout(res, 200));
         }
-        console.log('Done Finnhub Socket symbol subscriptions');
+        console.warn('Done Finnhub Socket symbol subscriptions:', new Date());
     };
     let resetSocketTimeout;
     const setResetSocketWait = () => {
@@ -79,6 +79,7 @@ exports.initFinnhubSocket = (() => {
             clearTimeout(resetSocketTimeout);
         }
         resetSocketTimeout = setTimeout(async () => {
+            console.warn('Finnhub socket is resetting...:', new Date());
             socket?.removeAllListeners();
             socket?.close();
             await init();

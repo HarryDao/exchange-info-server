@@ -41,7 +41,7 @@ export const { initTwelveSocket } = (() => {
         },
       })
     );
-    console.log('Done Twelve Data Socket symbol subscriptions');
+    console.warn('Done Twelve Data Socket symbol subscriptions:', new Date());
   };
 
   const onMessage = (event: WebSocket.MessageEvent) => {
@@ -88,6 +88,7 @@ export const { initTwelveSocket } = (() => {
     }
 
     resetSocketTimeout = setTimeout(async () => {
+      console.warn('Twelve socket is resetting...:', new Date());
       socket?.removeAllListeners();
       socket?.close();
 

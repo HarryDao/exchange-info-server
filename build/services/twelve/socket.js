@@ -34,7 +34,7 @@ exports.initTwelveSocket = (() => {
                 symbols: symbols.map((s) => s.symbol).join(','),
             },
         }));
-        console.log('Done Twelve Data Socket symbol subscriptions');
+        console.warn('Done Twelve Data Socket symbol subscriptions:', new Date());
     };
     const onMessage = (event) => {
         if (event.type === 'error') {
@@ -78,6 +78,7 @@ exports.initTwelveSocket = (() => {
             clearTimeout(resetSocketTimeout);
         }
         resetSocketTimeout = setTimeout(async () => {
+            console.warn('Twelve socket is resetting...:', new Date());
             socket?.removeAllListeners();
             socket?.close();
             await init();
