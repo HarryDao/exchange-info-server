@@ -9,7 +9,7 @@ const moreInfoRoutes_1 = require("./moreInfoRoutes");
 exports.router = (0, express_1.Router)();
 exports.router.get('/ping', (req, res) => res.status(200).send('pong'));
 exports.router.get('/data-configs', (req, res) => {
-    res.status(200).json({ dataConfigs: data_configs_1.DATA_CONFIGS });
+    res.status(200).json({ data: data_configs_1.DATA_CONFIGS });
 });
 exports.router.use('/history', historyRoutes_1.historyRouter);
 exports.router.use('/current', currentRoutes_1.currentRouter);

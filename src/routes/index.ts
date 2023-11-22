@@ -10,7 +10,7 @@ export const router = Router();
 
 router.get('/ping', (req: Request, res: Response) => res.status(200).send('pong'));
 router.get('/data-configs', (req: Request, res: Response) => {
-  res.status(200).json({ dataConfigs: DATA_CONFIGS });
+  res.status(200).json({ data: DATA_CONFIGS });
 });
 
 router.use('/history', historyRouter);
