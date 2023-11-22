@@ -6,7 +6,7 @@ export class GetHistoryShortQueryDto {
   symbols: string;
 }
 
-export class GetHistoryLongParamsDto {
+export class GetHistoryLongQueryDto {
   @IsString()
   @IsNotEmpty()
   symbol: string;

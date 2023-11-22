@@ -1,6 +1,6 @@
 export declare class GetHistoryShortQueryDto {
     symbols: string;
 }
-export declare class GetHistoryLongParamsDto {
+export declare class GetHistoryLongQueryDto {
     symbol: string;
 }

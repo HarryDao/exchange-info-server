@@ -9,13 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetMoreInfoParamsDto = void 0;
+exports.GetMoreInfoQueryDto = void 0;
 const class_validator_1 = require("class-validator");
-class GetMoreInfoParamsDto {
+class GetMoreInfoQueryDto {
 }
-exports.GetMoreInfoParamsDto = GetMoreInfoParamsDto;
+exports.GetMoreInfoQueryDto = GetMoreInfoQueryDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
-], GetMoreInfoParamsDto.prototype, "symbol", void 0);
+], GetMoreInfoQueryDto.prototype, "symbol", void 0);

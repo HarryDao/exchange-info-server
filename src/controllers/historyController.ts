@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
 import { validate } from '../utils';
-import { GetHistoryLongParamsDto, GetHistoryShortQueryDto } from '../dto';
+import { GetHistoryLongQueryDto, GetHistoryShortQueryDto } from '../dto';
 import { getLongHistoricalData, getShortHistoricalData } from '../data';
 
 const fetchHistoryShort = async (req: Request, res: Response) => {
@@ -14,20 +14,20 @@ const fetchHistoryShort = async (req: Request, res: Response) => {
   }
 
   const shortHistoricalData = getShortHistoricalData(symbols);
-  return res.status(200).send({ shortHistoricalData });
+  return res.status(200).send({ data: shortHistoricalData });
 };
 
 const fetchHistoryLong = async (req: Request, res: Response) => {
   let symbol: string;
   try {
-    const dto = await validate(req.params, GetHistoryLongParamsDto);
+    const dto = await validate(req.query, GetHistoryLongQueryDto);
     symbol = dto.symbol;
   } catch (error) {
     return res.status(403).send(error.message);
   }
 
   const candles = getLongHistoricalData(symbol);
-  return res.status(200).send({ candles });
+  return res.status(200).send({ data: candles });
 };
 
 export default {

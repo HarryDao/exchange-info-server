@@ -1,3 +1,3 @@
-export declare class GetMoreInfoParamsDto {
+export declare class GetMoreInfoQueryDto {
     symbol: string;
 }

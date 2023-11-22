@@ -5,4 +5,4 @@ import historyController from '../controllers/historyController';
 export const historyRouter = Router();
 
 historyRouter.get('/short', historyController.fetchHistoryShort);
-historyRouter.get('/long/:symbol', historyController.fetchHistoryLong);
+historyRouter.get('/long', historyController.fetchHistoryLong);

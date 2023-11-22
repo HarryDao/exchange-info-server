@@ -8,4 +8,4 @@ const express_1 = require("express");
 const historyController_1 = __importDefault(require("../controllers/historyController"));
 exports.historyRouter = (0, express_1.Router)();
 exports.historyRouter.get('/short', historyController_1.default.fetchHistoryShort);
-exports.historyRouter.get('/long/:symbol', historyController_1.default.fetchHistoryLong);
+exports.historyRouter.get('/long', historyController_1.default.fetchHistoryLong);

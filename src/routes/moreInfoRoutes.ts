@@ -4,4 +4,4 @@ import moreInfoController from '../controllers/moreInfoController';
 
 export const moreInfoRouter = Router();
 
-moreInfoRouter.get('/:symbol', moreInfoController.fetchMoreInfo);
+moreInfoRouter.get('/', moreInfoController.fetchMoreInfo);

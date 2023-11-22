@@ -13,19 +13,19 @@ const fetchHistoryShort = async (req, res) => {
         return res.status(403).send(error.message);
     }
     const shortHistoricalData = (0, data_1.getShortHistoricalData)(symbols);
-    return res.status(200).send({ shortHistoricalData });
+    return res.status(200).send({ data: shortHistoricalData });
 };
 const fetchHistoryLong = async (req, res) => {
     let symbol;
     try {
-        const dto = await (0, utils_1.validate)(req.params, dto_1.GetHistoryLongParamsDto);
+        const dto = await (0, utils_1.validate)(req.query, dto_1.GetHistoryLongQueryDto);
         symbol = dto.symbol;
     }
     catch (error) {
         return res.status(403).send(error.message);
     }
     const candles = (0, data_1.getLongHistoricalData)(symbol);
-    return res.status(200).send({ candles });
+    return res.status(200).send({ data: candles });
 };
 exports.default = {
     fetchHistoryShort,
