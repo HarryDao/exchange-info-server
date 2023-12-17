@@ -1,4 +1,4 @@
-import { DataConfig, DataProviderEnum, DataTypeEnum } from './types';
+import { DataConfig, DataProviderEnum, DataTypeEnum, SymbolConfigWithType } from './types';
 
 export const DATA_CONFIGS: DataConfig[] = [
   {
@@ -95,3 +95,16 @@ export const DATA_CONFIGS: DataConfig[] = [
     ],
   },
 ];
+
+export const DATA_CONFIGS_WITH_TYPE = (() => {
+  const map: { [symbol: string]: SymbolConfigWithType } = {};
+  DATA_CONFIGS.forEach(({ type, symbols }) => {
+    symbols.forEach((symbolConfig) => {
+      map[symbolConfig.symbol] = {
+        ...symbolConfig,
+        type,
+      };
+    });
+  });
+  return map;
+})();

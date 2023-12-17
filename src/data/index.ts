@@ -3,6 +3,8 @@ import fs from 'fs';
 import { SHORT_HISTORICAL_LENGTH } from '../configs/data';
 import { HistoricalData, CurrentData, Candle, Current, MoreInfoData, MoreInfo } from '../types';
 
+import { alertWatchList } from '../watchList';
+
 import SAMPLE_CURRENT_DATA from './sample/sample-current.json';
 import SAMPLE_HISTORICAL_DATA from './sample/sample-historical.json';
 import SAMPLE_MORE_INFO_DATA from './sample/sample-more-info.json';
@@ -77,10 +79,13 @@ export const {
       historicalData[symbol] = candles;
     },
     getCurrentData: () => currentData,
-    setCurrentData: (symbol: string, data: Current) => {
+    setCurrentData: (symbol: string, data: Current, alert?: boolean) => {
       const existing = currentData[symbol];
       if (!existing || existing.time < data.time) {
         currentData[symbol] = data;
+      }
+      if (alert) {
+        alertWatchList(symbol, data.price);
       }
     },
     getMoreInfoData: () => moreInfoData,

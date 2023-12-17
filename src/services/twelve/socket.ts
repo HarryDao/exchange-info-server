@@ -66,10 +66,14 @@ export const { initTwelveSocket } = (() => {
 
       if (response.event === 'price') {
         const { symbol, price, timestamp } = response as TwelveSocketPrice;
-        setCurrentData(symbol, {
-          price,
-          time: timestamp,
-        });
+        setCurrentData(
+          symbol,
+          {
+            price,
+            time: timestamp,
+          },
+          true
+        );
         broadcastNewData({
           symbol,
           price,

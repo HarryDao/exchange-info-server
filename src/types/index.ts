@@ -4,3 +4,4 @@ export * from './data.types';
 export * from './socket.types';
 export * from './finnhub.types';
 export * from './twelve.types';
+export * from './watchList.types';
