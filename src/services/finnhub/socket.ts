@@ -57,10 +57,14 @@ export const { initFinnhubSocket } = (() => {
 
       const { data } = response as FinnhubTradeDataResponse;
 
-      setCurrentData(data[0].s, {
-        price: data[0].p,
-        time: data[0].t,
-      });
+      setCurrentData(
+        data[0].s,
+        {
+          price: data[0].p,
+          time: data[0].t,
+        },
+        true
+      );
       broadcastNewData({
         symbol: data[0].s,
         price: data[0].p,

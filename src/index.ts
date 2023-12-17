@@ -11,16 +11,19 @@ import { initServices } from './services';
 import { initSocket } from './socket';
 import { router } from './routes';
 import { saveToLocal } from './data';
+import { initWatchList } from './watchList';
 
 (async () => {
   const app = express();
   const server = http.createServer(app);
   initSocket(server);
-  await initServices();
 
+  await initServices();
   if (process.env.ENABLE_SAVE_FILE_TO_LOCAL) {
     saveToLocal();
   }
+
+  initWatchList();
 
   server.listen(PORT, () => {
     console.log(`Server for Exchange Info running on port ${PORT}`);
